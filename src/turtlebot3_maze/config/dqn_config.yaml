@@ -1,0 +1,33 @@
+dqn_navigation:
+  ros__parameters:
+    # Model parameters
+    model_path: "models/dqn_trained.pth"
+    state_size: 28
+    action_size: 5
+    
+    # Learning parameters
+    learning_rate: 0.001
+    gamma: 0.99
+    epsilon: 1.0
+    epsilon_min: 0.01
+    epsilon_decay: 0.995
+    
+    # Experience replay
+    memory_size: 10000
+    batch_size: 32
+    
+    # Network architecture
+    hidden_size: 128
+    
+    # Training parameters
+    target_update_frequency: 10
+    save_frequency: 50
+    
+    # Navigation parameters
+    goal_threshold: 0.3
+    collision_threshold: 0.15
+    max_episode_steps: 500
+    
+    # Action parameters
+    linear_velocity: 0.15
+    angular_velocity: 0.5

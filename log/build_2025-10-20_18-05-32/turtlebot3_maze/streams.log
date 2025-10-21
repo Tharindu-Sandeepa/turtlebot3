@@ -1,0 +1,27 @@
+[0.019s] Invoking command in '/home/dimuthuaro/turtlebot3_ws/build/turtlebot3_maze': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/dimuthuaro/turtlebot3_ws/src/turtlebot3_maze -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/dimuthuaro/turtlebot3_ws/install/turtlebot3_maze
+[0.577s] -- The C compiler identification is GNU 13.3.0
+[0.882s] -- The CXX compiler identification is GNU 13.3.0
+[0.933s] -- Detecting C compiler ABI info
+[1.146s] -- Detecting C compiler ABI info - done
+[1.169s] -- Check for working C compiler: /usr/bin/cc - skipped
+[1.172s] -- Detecting C compile features
+[1.175s] -- Detecting C compile features - done
+[1.210s] -- Detecting CXX compiler ABI info
+[1.415s] -- Detecting CXX compiler ABI info - done
+[1.427s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.429s] -- Detecting CXX compile features
+[1.429s] -- Detecting CXX compile features - done
+[1.460s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[1.732s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[1.883s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[2.132s] -- Configuring incomplete, errors occurred!
+[2.132s] [31mCMake Error at /opt/ros/jazzy/share/ament_cmake_python/cmake/ament_python_install_package.cmake:66 (message):
+[2.133s]   ament_python_install_package() the Python package folder
+[2.133s]   '/home/dimuthuaro/turtlebot3_ws/src/turtlebot3_maze/turtlebot3_maze'
+[2.133s]   doesn't contain an '__init__.py' file
+[2.133s] Call Stack (most recent call first):
+[2.133s]   /opt/ros/jazzy/share/ament_cmake_python/cmake/ament_python_install_package.cmake:39 (_ament_cmake_python_install_package)
+[2.133s]   CMakeLists.txt:23 (ament_python_install_package)
+[2.133s] 
+[2.133s] [0m
+[2.143s] Invoked command in '/home/dimuthuaro/turtlebot3_ws/build/turtlebot3_maze' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/dimuthuaro/turtlebot3_ws/src/turtlebot3_maze -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/dimuthuaro/turtlebot3_ws/install/turtlebot3_maze

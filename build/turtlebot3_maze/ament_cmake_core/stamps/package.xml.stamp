@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypeset="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>turtlebot3_maze</name>
+  <version>1.2.0</version>
+  <description>TurtleBot3 Maze Environment for IE4060 Assignment 02</description>
+  <maintainer email="your.email@university.com">Your Name</maintainer>
+  <license>MIT</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <buildtool_depend>ament_cmake_python</buildtool_depend>
+
+  <!-- ROS2 Dependencies -->
+  <depend>rclpy</depend>
+  <depend>std_msgs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>nav_msgs</depend>
+  <depend>sensor_msgs</depend>
+  <depend>tf2_ros</depend>
+  <depend>visualization_msgs</depend>
+
+  <!-- TurtleBot3 Dependencies -->
+  <depend>turtlebot3_gazebo</depend>
+  <depend>turtlebot3_navigation2</depend>
+  <depend>slam_toolbox</depend>
+  <depend>nav2_bringup</depend>
+
+  <!-- Python Dependencies -->
+  <exec_depend>python3-numpy</exec_depend>
+  <exec_depend>python3-pytorch</exec_depend>
+  <exec_depend>python3-matplotlib</exec_depend>
+  <exec_depend>python3-tkinter</exec_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

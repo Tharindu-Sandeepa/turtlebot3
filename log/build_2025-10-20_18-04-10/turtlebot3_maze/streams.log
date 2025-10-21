@@ -1,0 +1,10 @@
+[0.011s] Invoking command in '/home/dimuthuaro/turtlebot3_ws/build/turtlebot3_maze': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/dimuthuaro/turtlebot3_ws/src/turtlebot3_maze -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/dimuthuaro/turtlebot3_ws/install/turtlebot3_maze
+[0.019s] [33mCMake Warning:
+[0.019s]   Ignoring extra path from command line:
+[0.019s] 
+[0.019s]    "/home/dimuthuaro/turtlebot3_ws/src/turtlebot3_maze"
+[0.019s] 
+[0.019s] [0m
+[0.020s] [0mCMake Error: The source directory "/home/dimuthuaro/turtlebot3_ws/src/turtlebot3_maze" does not appear to contain CMakeLists.txt.
+[0.020s] Specify --help for usage, or press the help button on the CMake GUI.[0m
+[0.023s] Invoked command in '/home/dimuthuaro/turtlebot3_ws/build/turtlebot3_maze' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/dimuthuaro/turtlebot3_ws/src/turtlebot3_maze -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/dimuthuaro/turtlebot3_ws/install/turtlebot3_maze

@@ -22,15 +22,17 @@ echo "✅ ROS2 Environment: $ROS_DISTRO"
 echo "✅ TurtleBot3 Model: $TURTLEBOT3_MODEL"
 
 # Test 1: Maze Generation
+# Test 1: Run maze generation script
 echo ""
 echo "🧪 Test 1: Maze Generation"
 python3 src/turtlebot3_maze/generate_assignment_maze.py
 
+# Check if the maze generation was successful ($? contains exit code of last command)
 if [ $? -eq 0 ]; then
     echo "✅ Maze generation test passed"
 else
     echo "❌ Maze generation test failed"
-    exit 1
+    exit 1  # Exit with error if maze generation failed
 fi
 
 # Test 2: Package Build

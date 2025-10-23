@@ -128,20 +128,26 @@ def order_packages(packages):
     :rtype: list
     """
     # select packages with no dependencies in alphabetical order
+    # Create a list of package names to be ordered
     to_be_ordered = list(packages.keys())
+    # Initialize ordered list
     ordered = []
     while to_be_ordered:
+        # Find packages with no dependencies
         pkg_names_without_deps = [
             name for name in to_be_ordered if not packages[name]]
+        # If no packages without dependencies found, we have a circular dependency
         if not pkg_names_without_deps:
             reduce_cycle_set(packages)
             raise RuntimeError(
                 'Circular dependency between: ' + ', '.join(sorted(packages)))
+        # Sort packages alphabetically and take the first one
         pkg_names_without_deps.sort()
         pkg_name = pkg_names_without_deps[0]
+        # Remove the selected package from to_be_ordered and add to ordered list
         to_be_ordered.remove(pkg_name)
         ordered.append(pkg_name)
-        # remove item from dependency lists
+        # Remove this package from all dependency lists
         for k in list(packages.keys()):
             if pkg_name in packages[k]:
                 packages[k].remove(pkg_name)

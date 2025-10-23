@@ -40,21 +40,30 @@ def main(argv=sys.argv[1:]):  # noqa: D103
 
     packages = get_packages(Path(__file__).parent, args.merged_install)
 
+    # Get packages in topological order
     ordered_packages = order_packages(packages)
+    
+    # Process each package
     for pkg_name in ordered_packages:
+        # Add package name as comment if COLCON_TRACE is set
         if _include_comments():
             print(
                 FORMAT_STR_COMMENT_LINE.format_map(
                     {'comment': 'Package: ' + pkg_name}))
+        
+        # Determine the installation prefix
         prefix = os.path.abspath(os.path.dirname(__file__))
         if not args.merged_install:
             prefix = os.path.join(prefix, pkg_name)
+            
+        # Get and print shell commands for this package
         for line in get_commands(
             pkg_name, prefix, args.primary_extension,
             args.additional_extension
         ):
             print(line)
 
+    # Clean up any trailing path separators
     for line in _remove_ending_separators():
         print(line)
 

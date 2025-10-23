@@ -35,7 +35,9 @@ def generate_launch_description():
     )
     
     # Gazebo launch
+    # Launch Gazebo simulation environment
     gazebo_launch = IncludeLaunchDescription(
+        # Include the Gazebo launch file from ros_gz_sim package
         PythonLaunchDescriptionSource([
             PathJoinSubstitution([
                 get_package_share_directory('ros_gz_sim'),
@@ -43,6 +45,9 @@ def generate_launch_description():
                 'gz_sim.launch.py'
             ])
         ]),
+        # Configure Gazebo launch arguments:
+        # - gz_args: Load the specified world file and run in real-time (-r)
+        # - on_exit_shutdown: Shutdown the entire system when Gazebo exits
         launch_arguments={
             'gz_args': [world_file, ' -r'],
             'on_exit_shutdown': 'true'
